@@ -1,21 +1,38 @@
-/*encabezado*/
-header{
-	background-color: blue;
+body {
+    margin: 0 auto;
 }
-.one{
-/*background-image: url(assets/images/logo-laboratoria.svg);*/
 
+/*encabezado*/
+#upper-header {
+    text-align: center;
 }
-.hamb{
+
+#logo {
+    background-image: url("../assets/images/logo-laboratoria.svg");
+    width: 200px;
+    height: 60px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+}
+
+#menu{
 	float: right;
-	width: 40px;
-	text-decoration: none;
+    width: 40px;
+    background: none;
 	border: none;
-	color: #000;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    margin-right: 7%;
+    margin-top: 20px;
 }
+
 .two{
 	background-color: red;
 }
 ul{
 list-style: none;
 }
+
