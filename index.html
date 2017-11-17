@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,900" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
 
@@ -44,48 +45,14 @@
 </section>
 </header>
 <!--Imágenes de Gráficas-->
-<section id="upp">
-  <div class="firstGraf">
-    <h1>ENROLLMENT</h1> 
-     <div class="insideR">
-        <h4>120</h4><h6>#STUDENTS CURRENT<br>
-        ENROLLED</h6>
-      </div> 
-       <div class="insideL">
-        <h4>20%</h4><h6>DROPOUT</h6>
-      </div>
-      <div class="graph1">
-      <img src="assets/images/bar-graph.png">
-      </div>
-  </div>
-  <div class="middleGraf">
-    <h1>ACHIEVEMENT</h1> 
-     <div class="middleR">
-        <h4>105</h4><h6>#STUDENTS THAT MEET<br>
-        THE TARGET</h6>
-      </div> 
-       <div class="middleL">
-        <h4>78%</h4><h6>OF TOTAL(135)</h6>
-      </div>
-      <div class="graph2">
-      <img src="assets/images/graph.png">
-      </div>
-  </div>
-  <div class="lastGraf">
-    <h1>NET PROMOTER SCORE</h1> 
-     <div class="lastR">
-        <h4>78%</h4><h6>% CUMULATE NPS</h6>
-      </div> 
-       <div class="lastL">
-        <h6>60% Promoters<br>30%Passive<br>10% Detractors</h6>
-      </div>
-      <div class="graph3">
-      <img src="assets/images/graph.png">
-      </div>
-</section>
+<div id="chart-div-pie"></div>
+<div id="chart-div-bar"></div>
+
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+<script src="js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+<script src="js/app.js"></script>
+
+    
   </body>
 </html>

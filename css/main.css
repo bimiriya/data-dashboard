@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     font-family: 'Muli', sans-serif;
+    background-color: #F2F2F2;
 }
 
 #upper-nav {
@@ -30,13 +31,11 @@ body {
     outline: none;
     cursor: pointer;
 }
-
 #menu hr {
     height: 3px; 
     border: none;
     background: #424242;
 }
-
 
 #two{
   list-style: none;
@@ -68,88 +67,7 @@ ol li {
 }
 #upp{
 	margin-top: 4em;
-	
 }
-h1, h4{
-	margin: 0;
-	line-height: 2;
-}
- h5, h6{
- 	margin: 0;
- }
- .firstGraf{
- 	display: inline-block;
-	width: auto;
-	padding-left: 2em;
-	margin-right: 1em;
-	background-color: #F2F2F2
- }
-.insideR{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	padding: 0;
-	margin-right: 4em;
-	width: 10em;
-}
-.insideL{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	line-height: 0;
-	width: 10em;
-	height: 3em;
-	color: red;
-}
- .middleGraf{
- 	display: inline-block;
-	width: auto;
-	padding-right: 2em;
-	padding-left: 2em;
-	background-color: #F2F2F2
- }
- .middleR{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	padding: 0;
-	margin-right: 4em;
-	width: 10em;
-}
-.middleL{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	line-height: 0;
-	width: 10em;
-	height: 3em;
-	color: red;
-}
- .lastGraf{
- 	float: right;
-	width: auto;
-	padding-right: 2em;
-	padding-left: 2em;
-	background-color: #F2F2F2
- }
- .lastR{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	padding: 0;
-	margin-right: 4em;
-	width: 10em;
-}
-.lastL{
-	background-color: #FAFAFA;
-	display: inline-block;
-	text-align: center;
-	line-height: 0;
-	width: 10em;
-	height: 3em;
-    color: red;
-}
-
 /*menu desplegable sin visibilidad*/
 #menu-desplegable {
     text-align: left;
@@ -164,7 +82,19 @@ h1, h4{
     font-weight: 900;
     display: none;
 }
-
+#chart-div-pie{
+	margin-top: 4%;
+	margin-left: 4%;
+	display: inline-block;
+	    position: relative;
+    padding-bottom: 20px
+}
+#chart-div-bar{
+text-align: center;
+display: inline-block;
+    position: relative;
+    padding-bottom: 20px
+}
 #menu-desplegable * {
     border: 1px dashed red;
 }
