@@ -1,30 +1,35 @@
 body {
     margin: 0 auto;
     font-family: 'Muli', sans-serif;
-    background-color: #F2F2F2;
+    background: #f7f7f7;
+}
+
+header nav {
+    margin: 0;
+    display: inline-block;
 }
 
 #upper-nav {
     text-align: center;
-
+    width: 100%;
+    height: 70px;
+    background: white;
 }
 
 #logo {
     width: 200px;
     height: 60px;
-    background-image: url("../assets/images/logo-laboratoria.svg");
-    background-size: cover;
+    position: relative;
+    top: 10px;
 }
 
-#logo {
-    display: inline-block;
-    vertical-align: middle;
-}
 /*menu button*/
 #menu {
+    position: absolute;
     float: right;
-    margin: 20px 90px 0 0;
     width: 40px;
+    right: 100px;
+    top: 25px;
     background: none;
     color: black;
     border: none;
@@ -37,37 +42,107 @@ body {
     background: #424242;
 }
 
-#two{
+/*menu desplegable sin visibilidad*/
+#menu-desplegable {
+    position: fixed;
+    right: 0;
+    text-align: left;
+    list-style: none;
+    width: 300px;
+    padding: 0;
+    margin-top: 0;
+    background: #2f2f2f;
+    color: white;
+    font-weight: 900;
+    display: none;
+}
+
+#userpic {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/images/userpic.png");
+    background-size: cover;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#menu-desplegable li:first-child {
+    padding: 25px 0 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#menu-desplegable li {
+    padding: 30px 0;
+    border-bottom: 1px solid white;
+}
+
+#menu-desplegable li:not(:first-child):hover {
+    background: #505050;
+    cursor: default;
+}
+
+#menu-desplegable h4 {
+    display: inline-block;
+    
+}
+
+#menu-desplegable li {
+    padding-left: 30px;
+}
+
+#menu-desplegable i, #menu-desplegable h4 {
+    display: inline-block;
+}
+
+#menu-desplegable li:first-child i {
+    font-size: 20px;
+}
+
+#menu-desplegable li:not(:first-child) i {
+    font-size: 10px;
+}
+
+/*BOTTOM NAV*/
+#bottom-nav {
+    width: 100%;
+    background-color: #c4c4c4;
+}
+
+/*TABS*/
+#tabs{
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #A4A4A4;
   line-height: 40px;
 }
-li{
+
+#tabs li{
   width: 100px;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
 }
-a{
-  text-decoration: none;
-  display: block;
-  color: #000;
-}
-a:hover{
+
+#tabs li:hover{
   background: #f9a91a;
-  color:#000;
 }
-a:active{
+#tabs li:active{
   background: #333;
   color: #fff;
 }
+
+
+
 ol li {
 	margin-right: 10em;
 }
 #upp{
 	margin-top: 4em;
 }
+
 /*menu desplegable sin visibilidad*/
 #menu-desplegable {
     text-align: left;
@@ -95,33 +170,83 @@ display: inline-block;
     position: relative;
     padding-bottom: 20px
 }
-#menu-desplegable * {
-    border: 1px dashed red;
+
+
+#students-content, #teachers-content {
+    display: none;
 }
 
-#menu-desplegable li:first-child {
-    padding: 30px 0;
-    cursor: pointer;
+#students-content {
+    padding: 0 80px;
+
 }
 
-#menu-desplegable li {
-    padding: 40px 0;
+#specialization {
+    background: white;
+    float: left;
+    position: relative;
+    left: 40px;
+    width: 300px;
+    padding: 10px 20px;
+    list-style: none;
+    border-radius: 3px;
 }
 
-#menu-desplegable li, #menu-desplegable h4 {
-    padding-left: 30px;
+#specialization li:not(:first-child) {
+    color: #8e979c;
+    margin: 10px 0;
 }
 
-#menu-desplegable i, #menu-desplegable h4 {
+.checkbox {
+    width: 12px;
+    border: 1px solid #fbbd00;
+    height: 12px;
     display: inline-block;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
-#menu-desplegable i {
+#specialization li:last-child div {
+    background: #fbbd00;
+}
+
+#students-content form {
+    background: white;
+    display: inline-block;
+    width: 750px;
+    line-height: 3;
+    border-radius: 3px;
+    vertical-align: top;
+    margin-top: 30px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.089), 4px 4px rgba(0, 0, 0, 0.034);
+}
+
+#students-content input {
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    width: 90%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.384);
+}
+
+#students-content input::placeholder {
     font-size: 20px;
 }
 
-#menu-desplegable hr {
+#students-content .fa {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #8e979c;
+}
+
+#students-list {
     background: white;
-    height: 1px; 
-    border: none;
+    display: inline-block;
+    width: 750px;
+    vertical-align: top;
+    margin-left: 50px;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.089), 4px 4px rgba(0, 0, 0, 0.034);
 }

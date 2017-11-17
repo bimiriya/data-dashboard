@@ -10,43 +10,80 @@
   </head>
   <body>
 
-<header>
-    <ul id="menu-desplegable">
-        <li id="menu-username">
-          <h4>VALENTINA SMITH</h4>
-          <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </li>
-        <hr>
-        <li>Add student</li>
-        <hr>
-        <li>Remove student</li>
-        <hr>
-        <li>Add sprint</li>
-        <hr>
-      </ul>
-  
-<nav id="upper-nav">
-  <div id="logo"></div>
-      <button id="menu">
-        <hr>
-        <hr>
-        <hr>
-      </button>
-</nav>
+    <header>
+      <!--menu global-->
+      <nav id="upper-nav">
+        <!--menu desplegable sin visibilidad-->
+        <ul id="menu-desplegable">
+          <li id="menu-username">
+            <div id="userpic"></div>
+            <h4>VALENTINA SMITH</h4>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </li>
+          <li>Add student <sup><i class="fa fa-plus" aria-hidden="true"></i></sup></li>
+          <li>Remove student <sup><i class="fa fa-minus" aria-hidden="true"></i></sup></li>
+          <li>Add sprint <sup><i class="fa fa-plus" aria-hidden="true"></i></sup></li>
+        </ul>
+        <!--logo laboratoria-->
+          <img src="assets/images/logo-laboratoria.svg" alt="" id="logo">
+
+          <!--menu hamburguesa-->
+        <button id="menu">
+          <hr>
+          <hr>
+          <hr>
+        </button>
+      </nav>
+
+      <!--menu local-->
+      <nav id="bottom-nav">
+        <ul id="tabs">
+          <li id="overview">Overview</li>
+          <li id="students">Students</li>
+          <li id="teachers">Teachers</li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+<section id="upp">
+  <div class="firstGraf">
+  <div id="chart-div-pie"></div>
+  <div id="chart-div-bar"></div>
 </section>
-<section class="two">
-    <nav>
-      <ul id="two">
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Students</a></li>
-        <li><a href="#">Teachers</a></li>
-      </ul>
-    </nav>  
+
+<section id="students-content">
+  <ul id="specialization">
+    <li>
+        <h3>SPECIALIZATION</h3>
+    </li>
+    <li>
+        <div class="checkbox"></div>
+        <span>Javascript</span>
+    </li>
+    <li>
+        <div class="checkbox"></div>
+        <span>UX Design</span>
+    </li>
+    <li>
+        <div class="checkbox"></div>
+        <span>Front-end Designer</span>
+    </li>
+  </ul>
+
+  <aside>
+    <form action="">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="search" placeholder="Search student">
+    </form>
+    <div id="students-list">j</div>
+  </aside>
 </section>
-</header>
-<!--Imágenes de Gráficas-->
-<div id="chart-div-pie"></div>
-<div id="chart-div-bar"></div>
+
+<section id="teachers-content">
+  kjfenf
+</section>
 
 		<!-- Base de datos -->
 <script src="js/data.js"></script>

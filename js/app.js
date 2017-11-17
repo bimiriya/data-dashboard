@@ -6,14 +6,46 @@ menu.onclick = function() {
     menu.style.display = "none";
     menuDesplegable.style.height = window.innerHeight + "px";
     menuDesplegable.style.display = "initial";
+    menuDesplegable.style.position = "fixed";
 }
 
 menUsername.onclick = function() {
     menuDesplegable.style.display = "none";
     menu.style.display = "initial";
 }
+
+var overview = document.getElementById("overview");
+var overviewContent = document.getElementById("upp");
+var students = document.getElementById("students");
+var studentsContent = document.getElementById("students-content");
+var teachers = document.getElementById("teachers");
+var teachersContent = document.getElementById("teachers-content");
+
+overview.onclick = function() {
+    overviewContent.style.display = "initial";
+    studentsContent.style.display = "none";
+    teachersContent.style.display = "none";
+}
+
+//funciones del tab students
+
+students.onclick = function() {
+    overviewContent.style.display = "none";
+    studentsContent.style.display = "initial";
+    teachersContent.style.display = "none";
+}
+
+teachers.onclick = function() {
+    overviewContent.style.display = "none";
+    studentsContent.style.display = "none";
+    teachersContent.style.display = "initial";
+}
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
+
+
+
+
 	//gráficas
     google.charts.load('current', {'packages':['corechart']}); // Load the Visualization API and the corechart package.
 
