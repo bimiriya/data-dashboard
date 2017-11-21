@@ -551,22 +551,7 @@ function generation() {
 
 
 
-    //dropout rate
-    var data1 = data["SCL"]["2017-1"];
-    var data2 = data1["students"];
-    var contador = 0;
-    for (var i = 0 ; i < data2.length ; i++) {
-        var data3 = data2[i]["active"];
-        if (data3 == false) {
-            contador++
-        }
-    } document.getElementById("dropout-per").innerHTML = ((contador * 100) / data3.length)  + "%";
-
-    for (var j = 0 ; j < data2.length ; j++) {
-        if (data2[i]["active"] == false) {
-            contador++
-        }
-    } document.getElementById("dropout-per").innerHTML = contador + "%";
+ 
 
 
 

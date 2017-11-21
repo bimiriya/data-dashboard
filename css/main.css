@@ -338,7 +338,12 @@ header nav {
     width: 80%;
 }
 
-
+#tech-scores,#hse-scores {
+    background: white;
+    display: inline-block;
+    padding: 2% 2%;
+    margin: 3%;
+}
 
 
 
@@ -660,4 +665,35 @@ header nav {
 
 .year-option:not(.year-option:first-child):hover {
     border-bottom: 2px solid #fbbd00;
+}
+
+#tech-scores img, #hse-scores img {
+    display: block;
+}
+
+#tech-scores, #hse-scores {
+    display: inline-block;
+}
+
+.top-cont span {
+    color: #fbbd00;
+}
+
+#students-rank {
+    background: white;
+    margin: 0 5%;
+}
+
+#students-rank h2 {
+    color: green;
+}
+
+#team-score div{
+    display: inline-block;
+    margin: 2% 5%;
+    cursor: default;
+}
+
+#team-score div:hover {
+    color: #fbbd00;
 }
