@@ -24,6 +24,10 @@
           <li>Remove student <sup><i class="fa fa-minus" aria-hidden="true"></i></sup></li>
           <li>Add sprint <sup><i class="fa fa-plus" aria-hidden="true"></i></sup></li>
         </ul>
+
+        <!--en/es-->
+        <h4 id="language"><span>EN</span> / <span>ES</span></h4>
+        
         <!--logo laboratoria-->
           <img src="assets/images/logo-laboratoria.svg" alt="" id="logo">
 
@@ -37,23 +41,90 @@
 
       <!--menu local-->
       <nav id="bottom-nav">
-        <ul id="tabs">
-          <li id="overview">Overview</li>
-          <li id="students">Students</li>
-          <li id="teachers">Teachers</li>
-        </ul>
+
+        <nav id="city-selector">
+          <h3 id="select-city">SELECT CITY</h3>
+          <div id="peru-flag" class="flag">
+            <div></div>
+          </div>
+          <div id="chile-flag" class="flag">
+            <div>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div></div>
+          </div>
+          <div id="mex-flag" class="flag">
+            <div></div>
+            <div></div>
+          </div>
+        </nav>
+
+        <section id="choose-sede">
+            <div class="sede-cont">
+              <img id="img-lima" src="assets/images/lima.jpg" alt="LIMA">
+              <h3>LIMA</h3>
+            </div>
+            <div class="sede-cont">
+              <img id="img-arq" src="assets/images/arequipa.jpg" alt="AREQUIPA">
+              <h3>AREQUIPA</h3>
+            </div>
+            <div class="sede-cont">
+              <img id="img-scl" src="assets/images/santiago.jpg" alt="SANTIAGO">
+              <h3>SANTIAGO</h3>
+            </div>
+            <div class="sede-cont">
+              <img id="img-mex" src="assets/images/mex.jpg" alt="CIUDAD DE MÉXICO">
+              <h3>CIUDAD DE MÉXICO</h3>
+            </div>
+        </section>
+
       </nav>
     </header>
 
 
+<section id="overview-content">
+    <div id="top-container">
+      <div id="top-left-cont">
+          <div id="overview-title">
+              <h1>SANTIAGO</h1>
+              <h3>2017</h3>
+          </div>
+          <div id="top-bottom-cont">
+              <div id="dropout" class="top-cont">
+                  <h3 id="dropout-per"></h3>
+                  <h4>DROPOUT RATE</h4>
+                </div>
+                <div id="meet-target" class="top-cont">
+                  <h3>80%</h3>
+                  <h4>MEET THE TARGET</h4>
+                </div>
+          </div>
+      </div>
+      <div id="top-right-cont">
+        <h2>90%</h2>
+        <h3>ACTIVE STUDENTS</h3>
+      </div>
 
-<section id="upp">
-  <div class="firstGraf"></div>
-  <div id="chart-div-pie"></div>
-  <div id="chart-div-bar"></div>
+      <div id="students-meet-target"></div>
+
+      <div id="nps"></div>
+
+      <div id="tech-scores"></div>
+      <div id="hse-scores"></div>
+
+      <div id="students-rank"></div>
+
+      <div id="team-score">
+        <div id="jedi-score"></div>
+        <div id="teacher-score"></div>
+      </div>
+    </div>
 </section>
 
 <section id="students-content">
+  <div id="generations">
+    <div id="filler"></div>
+  </div>
   <ul id="specialization">
     <li>
         <h3>SPECIALIZATION</h3>
@@ -82,13 +153,13 @@
 </section>
 
 <section id="teachers-content">
-  kjfenf
+  kjfenfjkhiuujk iiii
 </section>
 
 		<!-- Base de datos -->
 <script src="js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-<script src="js/app.js"></script>
+<script src="js/app3.js"></script>
 
     
   </body>

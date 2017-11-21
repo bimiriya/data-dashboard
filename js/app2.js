@@ -1,9 +1,10 @@
-//función para el menu desplegable
+//función menu desplegable
 //elementos recuperados del html
 var menu = document.getElementById("menu");
 var menuDesplegable = document.getElementById("menu-desplegable");
-var menUsername = document.getElementById("menu-username");
+var menuUsername = document.getElementById("menu-username");
 
+//abrir
 menu.onclick = function() {
     menu.style.display = "none";
     menuDesplegable.style.height = window.innerHeight + "px";
@@ -11,107 +12,150 @@ menu.onclick = function() {
     menuDesplegable.style.position = "fixed";
 }
 
-menUsername.onclick = function() {
+//cerrar
+menuUsername.onclick = function() {
     menuDesplegable.style.display = "none";
     menu.style.display = "initial";
 }
 
-//función del menu sedes
+//función menu sedes
 //elementos recuperados del html
 var sedes = document.getElementById("sedes");
 var menuSedes = document.getElementById("menu-sedes");
-var caretDownIcon = document.getElementById("caret-down");
-var sedeLIMA = document.getElementById("sede-lima");
+var sedeLima = document.getElementById("sede-lima");
 var sedeARQ = document.getElementById("sede-arq");
 var sedeSCL = document.getElementById("sede-scl");
 var sedeMex = document.getElementById("sede-mex");
+
+//elementos para generaciónes recuperados del html
 var years = document.getElementById("years");
 var switches = document.getElementById("switches");
 
 //desplegar menu
 sedes.onmouseover = function() {
-    menuSedes.style.display = "block";
-    sedes.style.borderBottomLeftRadius = "0px";
-    sedes.style.borderBottomRightRadius = "0px";
-    caretDownIcon.style.visibility = "hidden";
+    //estilos
+        menuSedes.style.display = "block";
+        sedes.style.borderBottomLeftRadius = "0px";
 }
 
+//esconder menu
 menuSedes.onmouseleave = function() {
+    //estilos
     menuSedes.style.display = "none";
     sedes.style.borderBottomLeftRadius = "4px";
     sedes.style.borderBottomRightRadius = "4px";
-    caretDownIcon.style.visibility = "visible";
 }
 
+//funcion crear checkboxes por medio de opciones del menu desplegable
+//elementos creados
+var chbx15 = document.createElement("input");
+var span15 = document.createElement("span");
+var chbx16 = document.createElement("input");
+var span16 = document.createElement("span");
+var chbx17 = document.createElement("input");
+var span17 = document.createElement("span");
+
+function checkboxes() {   
+    //atributos
+    chbx15.setAttribute("type","checkbox");
+    chbx16.setAttribute("type","checkbox");
+    chbx17.setAttribute("type","checkbox");
+
+    //innerhtml
+    span15.innerHTML = "2015";
+    span16.innerHTML = "2016";
+    span17.innerHTML = "2017";
+
+    //elementos apendizados
+    years.appendChild(chbx15);
+    years.appendChild(span15);
+    years.appendChild(chbx16);
+    years.appendChild(span16);
+    years.appendChild(chbx17);
+    years.appendChild(span17);
+
+    chbx17.onclick = function() {
+        switches.style.display = "block";
+    }
+}
+
+//opciones
 //lima
-sedeLIMA.onclick = function() {
+var years = document.getElementById("years")
+sedeLima.onclick = function() {
+    //elemento recuperado del html
+    var sede = document.getElementById("sede")
+
     menuSedes.style.display = "none";
-    var sede = document.getElementById("sede");
     sede.innerHTML = "LIMA";
-    sedeLIMA.style.display = "none";
+
+    //estilos
+    sedeLima.style.display = "none";
     sedeARQ.style.display = "block";
     sedeSCL.style.display = "block";
     sedeMex.style.display = "block";
     sedes.style.borderBottomLeftRadius = "4px";
     sedes.style.borderBottomRightRadius = "4px";
-    caretDownIcon.style.display = "none";
-    years.style.display = "inline-block";
-    switches.style.display = "block";
+    checkboxes();
 }
 
 //arequipa
 sedeARQ.onclick = function() {
+    //elemento recuperado del html
+    var sede = document.getElementById("sede")
+
     menuSedes.style.display = "none";
-    var sede = document.getElementById("sede");
     sede.innerHTML = "AREQUIPA";
-    sedeLIMA.style.display = "block";
+
+    //estilos
+    sedeLima.style.display = "block";
     sedeARQ.style.display = "none";
     sedeSCL.style.display = "block";
     sedeMex.style.display = "block";
     sedes.style.borderBottomLeftRadius = "4px";
     sedes.style.borderBottomRightRadius = "4px";
-    caretDownIcon.style.display = "none";
-    years.style.display = "inline-block";
-    switches.style.display = "block";    
+    checkboxes();
 }
 
 //santiago
 sedeSCL.onclick = function() {
+    //elemento recuperado del html
+    var sede = document.getElementById("sede")
+
     menuSedes.style.display = "none";
-    var sede = document.getElementById("sede");
     sede.innerHTML = "SANTIAGO";
-    sedeLIMA.style.display = "block";
+
+    //estilos
+    sedeLima.style.display = "block";
     sedeARQ.style.display = "block";
     sedeSCL.style.display = "none";
     sedeMex.style.display = "block";
-    sedes.style.borderBottomRightRadius = "4px";
     sedes.style.borderBottomLeftRadius = "4px";
-    caretDownIcon.style.display = "none";
-    years.style.display = "inline-block";
-    switches.style.display = "block";    
+    sedes.style.borderBottomRightRadius = "4px";
+    checkboxes();
 }
 
-//ciudad de méxico
+//mexico
 sedeMex.onclick = function() {
+    //elemento recuperado del html
+    var sede = document.getElementById("sede")
+
     menuSedes.style.display = "none";
-    var sede = document.getElementById("sede");
     sede.innerHTML = "CIUDAD DE MÉXICO";
-    sedeLIMA.style.display = "block";
+
+    //estilos
+    sedeLima.style.display = "block";
     sedeARQ.style.display = "block";
     sedeSCL.style.display = "block";
     sedeMex.style.display = "none";
     sedes.style.borderBottomLeftRadius = "4px";
     sedes.style.borderBottomRightRadius = "4px";
-    caretDownIcon.style.display = "none";
-    years.style.display = "inline-block";
-    switches.style.display = "block";    
+    checkboxes();
 }
-
-
 //funciones para mostrar el contenido de las tabs
 //elementos recuperados del html
 var overview = document.getElementById("overview");
-var overviewContent = document.getElementById("charts");
+var overviewContent = document.getElementById("overview-content");
 var students = document.getElementById("students");
 var studentsContent = document.getElementById("students-content");
 var teachers = document.getElementById("teachers");
@@ -135,7 +179,7 @@ students.onclick = function() {
     var checkbox17 = document.getElementById("checkbox171");
     var slider171 = document.getElementById("scl171");
     
-    var slider172 = document.getElementById("gen172");
+    var slider172 = document.getElementById("scl172");
     slider171.onclick = function() {
             var data1 = data["SCL"]["2017-1"];
             var data2 = data1["students"]
@@ -386,282 +430,3 @@ teachers.onclick = function() {
     studentsContent.style.display = "none";
     teachersContent.style.display = "initial";
 }
-// Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
-
-
-
-
-    //----------gráficas-----------------
-    
-    //función para gráfico de estudiantes activas e inactivas
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart1);
-    
-      function drawChart1() {
-        var data1 = data["SCL"]["2017-1"];
-        var data2 = data1["students"];
-        var contador1 = 0;
-        var contador2 = 0;
-        for (var i = 0 ; i < data2.length ; i++) {
-            if (data2[i]["active"] == true) {
-                contador1++
-            } else {
-                contador2++
-            }
-        }
-        // data table.
-        var googleData = new google.visualization.DataTable();
-        googleData.addColumn('string', "Estado");
-        googleData.addColumn('number', "Cantidad de alumnas");
-        googleData.addRows([
-          ['Active', contador1],
-          ['Dropouts', contador2],
-        ]);
-
-        // chart options
-        var options = {'title':'ENROLLMENT',
-                       'width': 270,
-                       'height':200,
-                       'colors': ['#fbbd00', '#ffd781'],
-                        titleTextStyle:  {fontName: 'Muli',fontSize: 20,bold: true},
-                        chartArea:{left:20,top:30,width:'100%',height:'80%'}
-                        };
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart-div-pie'));
-        chart.draw(googleData, options);
-      };
-
-
-      //función logros en general
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart2);
-
-      function drawChart2() {
-        var data1 = data["SCL"]["2017-1"];
-        var data2 = data1["students"];
-        var empty1 = [];
-        var empty2 = [];
-        var empty3 = [];
-        var empty4 = [];
-        var empty5 = [];
-        var empty6 = [];
-        for (var i = 0 ; i < data2.length ; i++) {
-            //sprint1
-            if (data2[i]["active"] == true) {
-            data3A = data2[i]["sprints"][0]["score"]["tech"];
-            empty1.push(data3A);
-
-            function calcularTech(array) {
-                resultados = [];
-                for (var i = 0 ; i < array.length ; i++) {
-                    resultados.push((array[i] * 100) / 1800)
-                } return resultados;
-            } var resultA = calcularTech(empty1);
-
-
-            data3B = data2[i]["sprints"][0]["score"]["hse"];
-            empty2.push(data3B);
-
-            function calcularHSE(array) {
-                resultados = [];
-                for (var i = 0 ; i < array.length ; i++) {
-                    resultados.push((array[i] * 100) / 1200)
-                } return resultados
-            } var resultB = calcularHSE(empty2);
-
-            function sumScores(a,b) {
-                var sum = a.map(function (num, idx) {
-                    return (num + b[idx]) / 2;
-                  });
-                var finalResult = [];
-                for (var x = 0 ; x < sum.length ; x++) {
-                    if (sum[x] >= 70) {
-                        finalResult.push(sum[x])
-                    }
-                } return finalResult.length;
-            } var sprint1 = sumScores(resultA,resultB);
-
-            //sprint 2
-            data3C = data2[i]["sprints"][1]["score"]["tech"];
-            empty3.push(data3C);
-            var resultC = calcularTech(empty3);
-
-            data3D = data2[i]["sprints"][1]["score"]["hse"];
-            empty4.push(data3D);
-            var resultD = calcularHSE(empty4);
-            var sprint2 = sumScores(resultC,resultD);                
-
-            //sprint 3
-            data3E = data2[i]["sprints"][2]["score"]["tech"];
-            empty5.push(data3E);
-            var resultE = calcularTech(empty5);
-
-            data3F = data2[i]["sprints"][2]["score"]["hse"];
-            empty6.push(data3F);
-            var resultF = calcularHSE(empty6);
-            var sprint3 = sumScores(resultE,resultF);
-        }
-    }
-        var googleData = google.visualization.arrayToDataTable([
-          ['Year', 'Students that meet the target'],
-          ['S1',  sprint1],
-          ['S2',  sprint2],
-          ['S3',  sprint3]
-        ]);
-
-        var options = {
-          title: 'ACHIEVEMENT',
-          titleTextStyle:  {fontName: 'Muli',fontSize: 20,bold: true},
-          chartArea:{left:20,top:30,width:'70%',height:'80%'},
-          vAxis: {minValue: 0}
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(googleData, options);
-      }
-
-
-
-//función para gráfico de logros por sprint
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart4);
-
-     function drawChart4() {
-       
-            var data1 = data["SCL"]["2017-1"];
-            var data2 = data1["students"];
-            var empty1 = [];
-            var empty2 = [];
-            var empty3 = [];
-            var empty4 = [];
-            var empty5 = [];
-            var empty6 = [];
-            for (var i = 0 ; i < data2.length ; i++) {
-                //sprint1
-                if (data2[i]["active"] == true) {
-                data3A = data2[i]["sprints"][0]["score"]["tech"];
-                empty1.push(data3A);
-
-                function calcularTech(array) {
-                    resultados = [];
-                    for (var i = 0 ; i < array.length ; i++) {
-                        resultados.push((array[i] * 100) / 1800)
-                    } return resultados;
-                } var resultA = calcularTech(empty1);
-
-
-                data3B = data2[i]["sprints"][0]["score"]["hse"];
-                empty2.push(data3B);
-
-                function calcularHSE(array) {
-                    resultados = [];
-                    for (var i = 0 ; i < array.length ; i++) {
-                        resultados.push((array[i] * 100) / 1200)
-                    } return resultados
-                } var resultB = calcularHSE(empty2);
-    
-                function sumScores(a,b) {
-                    var sum = a.map(function (num, idx) {
-                        return (num + b[idx]) / 2;
-                      });
-                    var finalResult = [];
-                    for (var x = 0 ; x < sum.length ; x++) {
-                        if (sum[x] >= 70) {
-                            finalResult.push(sum[x])
-                        }
-                    } return finalResult.length;
-                } var sprint1 = sumScores(resultA,resultB);
-
-                //sprint 2
-                data3C = data2[i]["sprints"][1]["score"]["tech"];
-                empty3.push(data3C);
-                var resultC = calcularTech(empty3);
-
-                data3D = data2[i]["sprints"][1]["score"]["hse"];
-                empty4.push(data3D);
-                var resultD = calcularHSE(empty4);
-                var sprint2 = sumScores(resultC,resultD);                
-
-                //sprint 3
-                data3E = data2[i]["sprints"][2]["score"]["tech"];
-                empty5.push(data3E);
-                var resultE = calcularTech(empty5);
-
-                data3F = data2[i]["sprints"][2]["score"]["hse"];
-                empty6.push(data3F);
-                var resultF = calcularHSE(empty6);
-                var sprint3 = sumScores(resultE,resultF);
-            }
-        }
-        
-    
-        //data table.
-        var googleData = new google.visualization.DataTable();
-        googleData.addColumn('string', 'SPRINTS');
-        googleData.addColumn('number', 'STUDENTS THAT MEET THE TARGET');
-        googleData.addRows([
-          ['S1', sprint1],
-          ['S2', sprint2],
-          ['S3', sprint3]
-        ]);
-
-        //options
-        var options = {'title':'ACHIEVEMENT',
-                       'width':500,
-                       'height':300,
-                       titleTextStyle:  {fontName: 'Muli',fontSize: 20,bold: true},
-                       chartArea:{left:20,top:30,width:'80%',height:'80%'}
-                      };
-
-        var chart = new google.visualization.BarChart(document.getElementById('chart-div-bar'));
-        chart.draw(googleData, options);
-      }
-
-      
-      
-
-
-      //función nps
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart3);
-
-      function drawChart3() {
-
-        var data1 = data["SCL"]["2017-1"];
-        var data2 = data1["ratings"];
-        var detractorsArray = [];
-        var passiveArray = [];
-        var promotersArray = [];
-
-        for (var i = 0 ; i < data2.length ; i++) {
-            var detractors = data2[i]["nps"]["detractors"];
-            detractorsArray.push(detractors)
-            var passive = data2[i]["nps"]["passive"];
-            passiveArray.push(passive)
-            var promoters = data2[i]["nps"]["promoters"];
-            promotersArray.push(promoters);
-        }
-
-        var googleData = google.visualization.arrayToDataTable([
-            ['SPRINTS', 'Detractors',        'Passive',          'Promoters'],
-            ['S1',  detractorsArray[0],   passiveArray[0],     promotersArray[0]],      
-            ['S2',  detractorsArray[1],   passiveArray[1],     promotersArray[1]],
-            ['S3',  detractorsArray[2],   passiveArray[2],     promotersArray[2]]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'NET PROMOTER SCORE',
-            titleTextStyle:  {fontName: 'Muli',fontSize: 20,bold: true},
-            chartArea:{left:20,top:30,width:'100%',height:'80%'}
-          }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-        chart.draw(googleData, google.charts.Bar.convertOptions(options));
-      }
-
-      

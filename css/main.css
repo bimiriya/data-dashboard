@@ -23,27 +23,55 @@ header nav {
     top: 10px;
 }
 
+/*language*/
+#language {
+    float: left;
+    color: #fbbd00;
+    cursor: default;
+    margin-left: 2%;
+    position: absolute;
+}
+
+#language span {
+    color: #555555;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#language span:hover {
+    color: #fbbd00;
+    transition: .2s;
+}
+
 /*menu button*/
 #menu {
     position: absolute;
     float: right;
     width: 40px;
-    right: 8%;
-    top: 25px;
+    right: 3%;
+    top: 16px;
     background: none;
     color: black;
     border: none;
     outline: none;
     cursor: pointer;
 }
+
 #menu hr {
     height: 3px; 
     border: none;
     background: #424242;
+    transition: .5s;
+}
+
+#menu:hover hr {
+    background: #ffd781;
+    transition: .2s;
 }
 
 /*menu desplegable sin visibilidad*/
 #menu-desplegable {
+    z-index: 10;
     position: fixed;
     right: 0;
     text-align: left;
@@ -77,11 +105,13 @@ header nav {
 #menu-desplegable li {
     padding: 30px 0;
     border-bottom: 1px solid white;
+    transition: .2s;
 }
 
 #menu-desplegable li:not(:first-child):hover {
     background: #505050;
     cursor: default;
+    transition: .2s;
 }
 
 #menu-desplegable h4 {
@@ -108,39 +138,97 @@ header nav {
 /*BOTTOM NAV*/
 #bottom-nav {
     width: 100%;
-    background-color: #c4c4c4;
+    background-color: #e0e0e0;
+}
+
+
+/*menu sedes*/
+#sedes {
+    background: white;
+    display: inline-block;
+    width: 25%;
+    list-style: none;
+    border-radius: 4px;
+    color: #2f2f2f;
+    cursor: pointer;
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+#sedes h2 {
+    margin: 0;
+    padding: 1% 5%;
+    display: inline-block;
+}
+
+#sedes i {
+    font-size: 30px;
+    float: right;
+    margin-right: 5%;
+}
+
+#menu-sedes {
+    display: none;
+    margin-top: 0;
+    padding: 0;
+    background: white;
+    width: 25%;
+    list-style: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    color: #2f2f2f;
+    cursor: pointer;
+    margin-left: 5%;
+    z-index: 9;
+}
+
+#menu-sedes li {
+    padding: 5px 0;
+}
+
+#menu-sedes h2 {
+    margin: 0;
+    padding-left: 5%;
+    display: inline-block;
+}
+
+#menu-sedes li:hover {
+    border-bottom: 3px solid #fbbd00;
+}
+
+/*YEARS*/
+#years {
+    display: inline-block;
+    width: 30%;
+}
+
+#years span {
+    margin-right: 8%;
 }
 
 /*TABS*/
 #tabs{
   list-style: none;
-  padding: 0;
   margin: 0;
   line-height: 40px;
+  margin-top: 5px;
+  height: 70px;
+  margin-left: 2%;
+  text-align: center;
 }
 
 #tabs li{
-  width: 100px;
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  margin-right: 3%;
+  letter-spacing: 3px;
 }
 
-#tabs li:hover{
-  background: #fbbd00;
-}
-#tabs li:active{
-  background: #333;
-  color: #fff;
-}
-
-
-
-ol li {
-	margin-right: 10em;
-}
-#upp{
-    margin-top: 4em;
+#tabs h3:hover{
+  border-bottom: 5px solid #fbbd00;
 }
 
 /*menu desplegable sin visibilidad*/
@@ -157,19 +245,104 @@ ol li {
     font-weight: 900;
     display: none;
 }
-#chart-div-pie{
-	margin-top: 4%;
-	margin-left: 4%;
-	display: inline-block;
-	    position: relative;
-    padding-bottom: 20px
+
+/*choose sede*/
+#city-selector {
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.226);
+    cursor: default;
+    background: white;
 }
-#chart-div-bar{
-text-align: center;
-display: inline-block;
-    position: relative;
-    padding-bottom: 20px
+
+#city-selector h3 {
+    display: inline-block;
 }
+
+#choose-sede {
+    background: white;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.sede-cont {
+    display: inline-block;
+    margin: 7% 2%;
+}
+
+.sede-cont img {
+    cursor: pointer;
+}
+
+ .sede-cont img:hover {
+     outline: 3px solid #fbbd00;
+ }
+
+/*overview content*/
+#overview-content {
+    text-align: center;
+}
+
+#top-container {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#top-container * {
+    margin: 0;
+}
+
+#top-left-cont {
+    width: 40%;
+    display: inline-block;
+    background: white;
+    border-radius: 3px;
+    padding: 1% 0;
+}
+
+.top-cont {
+    display: inline-block;
+    background: #f7f7f7;
+    padding: 10px;
+}
+
+#dropout {
+    margin-right: 20px;
+}
+
+.top-cont h3 {
+    color: #fbbd00
+}
+
+#top-right-cont {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding: 3.3% 0;
+    background: white;
+    border-radius: 3px;
+}
+
+#top-right-cont h2 {
+    color: #fbbd00;
+}
+
+#students-meet-target {
+    width: 90%;
+    display: block;
+    margin-top: 20px;
+}
+
+#nps {
+    width: 80%;
+}
+
+
+
+
+
+
 
 /*STUDENTS TAB*/
 #students-content, #teachers-content {
@@ -178,10 +351,31 @@ display: inline-block;
 
 #students-content {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
-#specialization {
+#generations {
+    margin: 5px;
+    text-align: left;
+}
+
+#filler {
+    width: 32%;
+    height: 5px;
+    display: inline-block;
+}
+
+#generations h5 {
+    display: inline-block;
+    margin: 5px 40px 5px 10px;
+    cursor: default;
+}
+
+#generations h5:hover {
+    color: #fbbd00;
+}
+
+#specialization  {
     background: white;
     width: 20%;
     list-style: none;
@@ -249,10 +443,7 @@ display: inline-block;
 }
 
 #students-list {
-    background: white;
     display: block;
-    border-radius: 3px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.089), 4px 4px rgba(0, 0, 0, 0.034);
 }
 
 /*------ELEMENTOS DEL DOM*-------/
@@ -260,16 +451,36 @@ display: inline-block;
 
 #profile-container {
     /*div contenedor de todos los elementos de los perfiles de las estudiantes*/
-    border: 2px dashed red;
+    text-align: center;
+    background: white;
+    padding: 2% 0;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.089), 4px 4px rgba(0, 0, 0, 0.034);
 }
 
 #profile-container img {
     /*foto de perfil de las estudiantes*/
+    width: 20%;
+    height: 150px;
+    display: inline-block;
+}
+
+#student-profile-data {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    margin-left: 2%;
+    width: 70%;
 }
 
 #student-left-container {
     /*contenedor del nombre, especialidad y tags*/
-    border: 1px dashed green;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    text-align: left;
 }
 
 #student-name {
@@ -277,7 +488,7 @@ display: inline-block;
     margin: 0;
 }
 
-#specialization {
+#speciality {
     /*texto "front-end developer" bajo el nombre*/
     margin: 0;
     padding: 0;
@@ -285,17 +496,32 @@ display: inline-block;
 
 .tags {
     /*tags javascript, apis, jquery*/
-    background: pink;
-    margin: 1px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin-right: 2%;
+    display: inline-block;
+    padding: 1% 0;
+    width: 27%;
+    text-align: center;
+    font-size: 10px;
 }
 
 #student-right-container {
     /*contenedor de las cajas grises*/
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    text-align: center;
 }
 
 .grey-square {
     /*cajas grises a la izquierda (tech skills, life skills, english skills)*/
-    background-color: grey;
+    background-color: #e0e0e0;
+    display: inline-block;
+    margin: 1%;
+    padding: 5% 0;
+    width: 31%;
+    border-radius: 3px;
 }
 
 .grey-square h4, .grey-square h5 {
@@ -306,17 +532,132 @@ display: inline-block;
 .grey-square span {
     /*texto inferior dentro de las cajas grises*/
     /*también para el font de los tags*/
+    font-size: 10px;
+}
+
+.grey-square h5 {
+    line-height: 1.55;
+}
+
+#ver-perfil-container {
 }
 
 #ver-perfil {
     /*texto en la esquina inferior derecha ver perfil - icon fa-caret-right*/
+    cursor: pointer;
 }
 
 #ver-perfil i {
     /*fa-caret-right icon*/
 }
 
-/*--------------------------*/
-#profile-container:last-child {
+/*FLAGS*/
+.flag {
+    vertical-align: text-bottom;
     display: none;
+    width: 30px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.137), 2px 2px rgba(0, 0, 0, 0.034);
+}
+#peru-flag  {
+    background: red;
+    text-align: center;
+}
+
+#peru-flag div {
+    width: 10px;
+    height: 20px;
+    background: white;
+    display: inline-block;
+}
+
+#chile-flag {
+    text-align: left;
+    position: relative;
+    background: white;
+}
+
+#chile-flag i {
+    font-size: 8px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 1px;
+    color: white;
+}
+
+#chile-flag div:first-child {
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    background: blue;
+    vertical-align: top;
+    border-top-left-radius: 3px;
+}
+
+#chile-flag div:last-child {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: red;
+    vertical-align: bottom;
+    display: inline-block;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#mex-flag {
+    position: relative;
+}
+
+#mex-flag div {
+    display: inline-block;
+}
+
+#mex-flag div:first-child {
+    width: 10px;
+    height: 20px;
+    background: green;
+    float: left;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#mex-flag div:last-child {
+    width: 10px;
+    height: 20px;
+    background: red;
+    float: right;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;   
+}
+
+#year-selector {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    background: white;
+    padding: 0;
+    margin-left: 1%;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.089), 4px 4px rgba(0, 0, 0, 0.034);
+}
+
+#year-selector li:first-child {
+    display: block!important;
+}
+
+.year-option {
+    padding: 5px;
+    font-weight: 900;
+    cursor: pointer;
+    display: none;
+
+}
+
+.year-option:not(.year-option:first-child):hover {
+    border-bottom: 2px solid #fbbd00;
 }
